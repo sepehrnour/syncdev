@@ -11,7 +11,7 @@ export function MacbookScrollDemo() {
             Build with SyncDevelopment. <br />
           </span>
         }
-        src={`/Capture.png`}
+        src={"/linear.png"}
         showGradient={false}
       />
     </div>
