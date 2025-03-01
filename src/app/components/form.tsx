@@ -11,7 +11,7 @@ import {
 import emailjs from "@emailjs/browser";
 
 export function ContactForm() {
-  const formRef = useRef();
+  const formRef = useRef(null);
   const [loading, setLoading] = useState(false);
   const [form, setForm] = useState({
     name: "",
@@ -40,11 +40,6 @@ export function ContactForm() {
       setLoading(false);
       alert("Message sent successfully");
       setForm({ name: "", email: "", message: "" });
-      ReactGA.event({
-        category: "User Interaction",
-        action: "Clicked Button",
-        label: "Contact Us Submit Button", // Optional
-      });
     } catch (error) {
       setLoading(false);
       console.log(error);
